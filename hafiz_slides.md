@@ -44,14 +44,14 @@ _class: lead
 
 ## Project Directory Structure
 
-- **`src`**: Code directly related to project.
-- **`scripts`**: Specific implementations of code.
-- **`tests`**: Tests for your project.
-- **`data`**: Data for your project.
-- **`docs`**: Documentation for your project.
-- **Environment files**: `requirements.txt`, `environment.yml`, or `pyproject.toml`.
-- **`LICENSE`**: Guide for how your project can be used by others.
-- **`README`**: Information about your project.
+* **`src`**: Code directly related to project.
+* **`scripts`**: Specific implementations of code.
+* **`tests`**: Tests for your project.
+* **`data`**: Data for your project.
+* **`docs`**: Documentation for your project.
+* **Environment files**: `requirements.txt`, `environment.yml`, or `pyproject.toml`.
+* **`LICENSE`**: Guide for how your project can be used by others.
+* **`README`**: Information about your project.
 <!-- - **.gitignore file**: The file that contains the files and directories that should be ignored by Git. It should be named `.gitignore`. -->
 
 ---
