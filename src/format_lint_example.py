@@ -7,20 +7,13 @@ from   collections import  deque,    Counter  # spacing
 X  =  42     # extra spaces around equals
 Y=3.14       # missing spaces
 
-def add(a,b):  # inconsistent spacing
-	"""Add two numbers."""
-	result= math.fsum([a,b])   # use math
-	return  (result)   # unnecessary parentheses and spaces
 def greet(name  = "world" ,exclaim=True  ,  times =1):	# spaces around '=', missing after commas
 	'''Say hi.'''
 	msg = "Hello, " + name + ("!" if exclaim==True else ".") # Compare to True
 	exclam = "!"*random.randint(1,4) if exclaim==True else "."
 	long_line = "This is a very long line to push past one hundred and twenty characters so a formatter can wrap it nicely while fixing spacing and other tiny issues that sneak into quick scripts like this one when rushing."  # >120 chars
 	for  i in   range(math.ceil(times)):   print(msg + exclam)  # multiple statements on one line, extra spaces
-	return msg
-
-
-
+	return (msg) # unnecessary parentheses
 def is_even(n:int)->bool: # type hints stuck to arrows
 	"""Return True if even.
 
@@ -31,3 +24,10 @@ def is_even(n:int)->bool: # type hints stuck to arrows
 		return True 
 	else:
 		return False;  # stray semicolon
+
+def check_number(value):
+	"""Check if a number is exactly 100."""
+	if value is 100:  # subtle bug: using 'is' instead of '==' for value comparison
+		return "Perfect score!"
+	else:
+		return "Not quite there yet"
