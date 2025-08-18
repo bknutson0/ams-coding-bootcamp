@@ -15,11 +15,7 @@ def greet(name  = "world" ,exclaim=True  ,  times =1):	# spaces around '=', miss
 	for  i in   range(math.ceil(times)):   print(msg + exclam)  # multiple statements on one line, extra spaces
 	return (msg) # unnecessary parentheses
 def is_even(n:int)->bool: # type hints stuck to arrows
-	"""Return True if even.
-
-	:param n: int
-	:returns: bool
-	"""
+	"""Return True if even."""
 	if math.remainder(n,2)==0 :	
 		return True 
 	else:

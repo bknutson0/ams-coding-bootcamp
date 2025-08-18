@@ -153,18 +153,21 @@ Finally, all ruff settings, like uv dependencies, are stored in pyproject.toml.
 Lets look at an example:
 1. Show format_lint_example.py
 2. Point out formatting issues
-3. Enable ruff extension
+3. Enable ruff extension -- 41 problems!
 4. Hover over formatting issues
 5. Run `uv run ruff format format_lint_example.py`
 6. Use ctrl+z and ctrl+shift+z to undo and redo changes, highlighting specific changes from top to bottom
 7. Go to pyproject.toml and highlight ruff format settings
 8. Change line-length to 30 (way too short), and show how this immediately causes formatting issues in format_lint_example.py, then change back
-9. Point out how there are still yellow squiggles in format_lint_example.py; some of these are formatting issues ruff doesn't fix automatically (like "line too long"), but others are actually linting issues because they involve code syntax rather than format (e.g. truth comparison, unused variable)
+9. Point out how there are still yellow squiggles in format_lint_example.py (18 problems); some of these are formatting issues ruff doesn't fix automatically (like "line too long"), but others are actually linting issues because they involve code syntax rather than format (e.g. truth comparison, unused variable)
 10. Run 'uv run ruff check --fix --unsafe-fixes format_lint_example.py' to identify linting issues and aggressively fix those for which automatic fixes exist
 11. Use ctrl+z and ctrl+shift+z to undo and redo changes, highlighting specific changes from top to bottom
 11. Hover over the remaining linting issue, related to returning the condition directly and show an easy fix (also suggested by Copilot)
 12. Disable "SIM" ruff rules in pyproject.toml, and show how this is another way to remove the final linting issue
-13. 
+13. Compare before and after
+
+
+Hopefully this example demonstrates that ruff is an easy, fast, and flexible way to enforce consistent style and catch bugs in your code.
 -->
 
 ---
