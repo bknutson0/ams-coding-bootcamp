@@ -15,11 +15,34 @@ style: |
 
 ---
 
+# Part II
+
+- **Environment manager**: Conda, uv, etc.
+- **Formatter/linter**: Tools to make code clean and consistent.
+- **Testing**: Ensuring code works as intended.
+- **AI coding tools**: Pair coding with intelligent LLMs.
+
+---
+
 # Environment management
 
 - **Motivation:** Make code reproducible by identifying dependencies
 
 - **Examples:** **`pip venv`**, **`conda`**, **`uv`**
+
+<!--
+For Python code to run, you need to have the right version of Python and external libraries installed.
+In other words, you need to have the right "environment".
+Environment managers automate this process. 
+Python has a built-in environment manager called "pip venv", but there are also popular third-party tools like "conda" and "uv".
+My favorite is "uv" because it is the easiest to use, incredibly fast, and works well with other tools I'll mention later.
+Installing and activating an environment is as easy as 
+**`uv sync`** 
+-->
+
+---
+
+# Environment management with **`uv`**
 
 - **Basic commands**: 
     **`uv sync`**
@@ -28,11 +51,6 @@ style: |
 - Control all **`uv`** settings in **`pyproject.toml`**
 
 <!--
-For Python code to run, you need to have the right version of Python and external libraries installed.
-In other words, you need to have the right "environment".
-Environment managers automate this process. 
-Python has a built-in environment manager called "pip venv", but there are also popular third-party tools like "conda" and "uv".
-My favorite is "uv" because it is the easiest to use, incredibly fast, and works well with other tools I'll mention later.
 Installing and activating an environment is as easy as 
 **`uv sync`** 
 -->

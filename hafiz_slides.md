@@ -27,6 +27,49 @@ _class: lead
 - **Testing**: Ensuring code works as intended.
 - **AI coding tools**: Pair coding with intelligent LLMs.
 
+<!--
+PART I
+
+1:00pm - Social introduction, icebreakers (name, mac/windows/linux, favorite programming language)
+
+1:10pm - Introduction, bash slide
+
+1:17pm - Bash example
+
+1:20pm - IDEs
+
+1:25pm - Suggest installing VSCode
+
+1:35pm - GitHub slide
+
+1:40pm - GitHub example (clone our repo)
+
+1:45pm - Jupyter Notebook
+
+1:50pm - Jupyter Notebook example
+
+PART II
+
+2:00pm - Break
+
+2:05pm - Environment management
+
+2:10pm - Environment management example
+
+2:15pm - Formatter/linter
+
+2:20pm - Formatter/linter example
+
+2:25pm - Testing
+
+2:30pm - Testing example
+
+2:40pm - AI coding tools
+
+2:50pm - GitHub Copilot example
+
+-->
+
 ---
 
 ## Part 1
