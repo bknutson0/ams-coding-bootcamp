@@ -1,0 +1,55 @@
+[project]
+name = "ams-bootcamp-2025"
+version = "0.1.0"
+description = "introduction to bash, git, and python"
+authors = [
+	{ name = "Brandon Knutson", email = "bknutson@mines.edu" },
+    { name = "Hafiz Issah", email = "aissah@mines.edu"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+
+dependencies = [
+    "numpy"
+]
+
+[dependency-groups]
+dev = [
+	"ruff", # lint & format
+    "ty", # type check
+	"pytest" # test
+]
+
+[tool.ruff]
+	line-length = 120 # Set max line length for all tools
+
+[tool.ruff.lint.pydocstyle]
+    convention = "google" # Format docstrings
+
+[tool.ruff.format]
+	quote-style = "single"  # Use single quotes for consistency
+	indent-style = "space"  # Use spaces for indentation
+
+[tool.ruff.lint]  
+	select = [
+        "D",      # pydocstyle: enforce docstring conventions
+		"E",      # pycodestyle: enforce style rules
+		"F",      # Pyflakes: detect coding errors
+		"W",      # pycodestyle warnings
+		"I",      # isort: sort imports, remove unused imports
+		"N",      # pep8-naming: enforce naming conventions
+		"UP",     # pyupgrade: modernize syntax for newer Python versions
+		"B",      # flake8-bugbear: detect common security and performance issues
+		"C4",     # flake8-comprehensions: simplify comprehensions
+		"SIM",    # flake8-simplify: detect redundant expressions
+		"ANN",    # flake8-annotations: check for type hints
+		#"S",      # flake8-bandit: test for security
+		#"FIX002", # flake8-fixme: check for TODO
+		"PGH003", # pygrep-hooks: check for 'type: ignore' comments
+		"PGH004"  # pygrep-hooks: check for 'noqa' comments
+	]
+	ignore = [
+		"D100",      # pydocstyle: ignore missing public module docstring
+		#"ANN002",    # flake8-annotations: ignore missing type hints for *args
+		#"ANN003",    # flake8-annotations: ignore missing type hints for **kwargs
+	]

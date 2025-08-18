@@ -71,3 +71,7 @@ target/
 
 # compiled files
 bin/
+
+# uv local files
+.venv/
+uv.lock
