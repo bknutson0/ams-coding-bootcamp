@@ -15,10 +15,16 @@ style: |
 
 ---
 
+# BREAK
+
+Take a break and stretch your legs
+
+---
+
 # Part II
 
-- **Environment manager**: Conda, uv, etc.
-- **Formatter/linter**: Tools to make code clean and consistent.
+- **Environment manager**: **`conda`**, **`uv`**, etc.
+- **Formatting & linting**: Tools to make code clean and consistent.
 - **Testing**: Ensuring code works as intended.
 - **AI coding tools**: Pair coding with intelligent LLMs.
 
@@ -28,9 +34,10 @@ style: |
 
 - **Motivation:** Make code reproducible by identifying dependencies
 
-- **Examples:** **`pip venv`**, **`conda`**, **`uv`**
+- **Examples:** **`pip venv`**, **`conda`**, [**`uv`**](https://docs.astral.sh/uv/)
 
 <!--
+Caveat: I am very new to many of these tools, but I will try to share my personal perspective and the tricks I have found useful.
 For Python code to run, you need to have the right version of Python and external libraries installed.
 In other words, you need to have the right "environment".
 Environment managers automate this process. 
@@ -42,13 +49,13 @@ Installing and activating an environment is as easy as
 
 ---
 
-# Environment management with **`uv`**
+# Environment management with [**`uv`**](https://docs.astral.sh/uv/)
 
 - **Basic commands**: 
     **`uv sync`**
     **`uv add`**
 
-- Control all **`uv`** settings in **`pyproject.toml`**
+- Control all [**`uv`**](https://docs.astral.sh/uv/) settings in **`pyproject.toml`**
 
 <!--
 Installing and activating an environment is as easy as 
@@ -57,27 +64,107 @@ Installing and activating an environment is as easy as
 
 ---
 
-# Formatting & linting
+# Formatting
 
-- **Motivation:** Make code clean and consistent
+- **Motivation:** Enforce consistent style (spacing, line lengths, etc.)
 
-- **Examples:** **`isort`**, **`black`**, **`pylint`**, **`mypy`**, **`ruff`**
-
-- Control all **`ruff`** settings in **`pyproject.toml`**
+- **Examples:** **`isort`**, **`black`**, [**`ruff`**](https://docs.astral.sh/ruff/)
 
 <!--
-Good code is well-organized, consistent, and free of bugs and errors.
+Good code is well-organized, stylistically consistent, and free of bugs and errors.
 Formatters and linters are tools that help achieve these traits in your code.
 Formatters improve the visual appearance of your code without changing functionality.
-They enforce consistent style by controlling spacing, line lengths, indententation, etc.
-Linters identify style violations, but also potential bugs and errors like unused variables, missing imports, or more subtle bugs beyond obvious syntactic errors.
-Linters add lint, or yellow squiggles, under potentially problematic code.
-There are many kinds of formatters & linters that have different purposes.
-My favorite is "ruff", made by the creators of "uv", because it is very fast and easy to use, and it does both formatting and linting.
-ruff can do almost everything the other tools can.
+They enforce consistent style by controlling spacing, line lengths, indentation, etc.
+Examples of formatters include isort, black, and ruff.
+isort sorts imports alphabetically and automatically separates them into sections.
+black reformats entire files, ensuring a consistent style throughout.
+ruff is also a general formatter, that can basically do anything isort or black can do but faster, and its my preferred tool.
 -->
 
 ---
+
+# Linting
+
+- **Motivation:** Identify and fix potential bugs and remove logically unnecesssary code
+
+- **Examples:** **`pylint`**, **`flake8`**, [**`ruff`**](https://docs.astral.sh/ruff/)
+
+<!--
+Linters identify style violations, but also potential bugs and errors like unused variables, missing imports, or more subtle bugs beyond obvious syntactic errors.
+There are a handful of popular and customizable linters, including flake8, pylint, and ruff.
+You'll notice that we see ruff again here because it is both a formatter and a linter.
+And yet again, my favorite tool here is "ruff" because it can do almost everything the other tools can but faster.
+-->
+
+---
+
+# Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
+
+- **Format command:**
+**`uv run ruff format file_to_be_formatted.py`**
+
+- **Lint command:**
+**`uv run ruff check --fix file_to_be_linted.py`**
+
+- Or, simply use VSCode's **`ruff`** extension and format-on-save.
+
+- Control all [**`ruff`**](https://docs.astral.sh/ruff/) settings (i.e. [rules](https://docs.astral.sh/ruff/rules/)) in **`pyproject.toml`**
+
+<!--
+To format with ruff, just "uv add ruff" as a dependency, then run "ruff format" on the file as shown.
+To lint with ruff, just run "ruff check" on the file as shown.
+Linting technically only identifies issues, it doesn't necessarilly fix them.
+To have ruff fix any issues for which automatic fixes are available, add the --fix flag.
+Lets look at an example.
+
+However, although these commands are relatively straightforward, they are not they way that use ruff.
+A big reason I love ruff is that there is a VSCode extension for it.
+This allows ruff to provide real-time visual format & lint feedback.
+Although we do no have the time to show you, I recommend using format-on-save to automatically format and fix linting issues every time you ctrl+s save a file.
+-->
+
+---
+
+# Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
+
+- **Format command:**
+**`uv run ruff format file_to_be_formatted.py`**
+
+- **Lint command:**
+**`uv run ruff check --fix file_to_be_linted.py`**
+
+- Or, simply use VSCode's **`ruff`** extension and format-on-save.
+
+- Control all [**`ruff`**](https://docs.astral.sh/ruff/) settings (i.e. [rules](https://docs.astral.sh/ruff/rules/)) in **`pyproject.toml`**
+
+<!--
+To format with ruff, just "uv add ruff" as a dependency, then run "ruff format" on the file as shown.
+To lint with ruff, just run "ruff check" on the file as shown.
+Linting technically only identifies issues, it doesn't necessarilly fix them.
+To have ruff fix any issues for which automatic fixes are available, add the --fix flag.
+
+However, although these commands are relatively straightforward, they are not they way that I use ruff.
+A big reason I love ruff is that there is a VSCode extension for it.
+This allows ruff to provide real-time visual format & lint feedback.
+Although we do no have the time to show you, I also recommend using format-on-save to automatically format and fix linting issues every time you ctrl+s save a file.
+
+Finally, all ruff settings, like uv dependencies, are stored in pyproject.toml.
+
+Lets look at an example:
+1. Show format_lint_example.py
+2. Point out formatting issues
+3. Enable ruff extension
+4. Hover over formatting issues
+5. Run `uv run ruff format format_lint_example.py`
+6. Use ctrl+z and ctrl+shift+z to undo and redo changes, highlighting specific changes from top to bottom
+7. Go to pyproject.toml and highlight ruff format settings
+8. Change line-length to 30 (way too short), and show how this immediately causes formatting issues in format_lint_example.py, then change back
+9. Point out how there are still yellow squiggles in format_lint_example.py; some of these are formatting issues ruff doesn't fix automatically (like "line too long"), but others are actually linting issues because they involve code syntax rather than format (e.g. truth comparison, unused variable)
+10. Run 'uv run ruff check --fix format_lint_example.py' to identify linting issues and fix those for which automatic fixes exist
+-->
+
+---
+
 
 # Testing
 
@@ -96,3 +183,10 @@ The
 - **Motivation:** Pair coding with an intelligent LLM is the way of the future
 
 - **Examples:** OpenAI Codex, Claude Code, GitHub Copilot
+
+- As a student, you can get GitHub Copilot Pro for free via the [Student Developer Pack](https://education.github.com/pack/)
+
+<!--
+Pair programming with an AI agent can help you write better code faster.
+Agents can provide context-aware autocomplete suggestions, but also assist with code navigation, refactoring, generating tests, and much more.
+-->

@@ -20,16 +20,16 @@ dev = [
 	"pytest" # test
 ]
 
+# Format settings
 [tool.ruff]
 	line-length = 120 # Set max line length for all tools
-
 [tool.ruff.lint.pydocstyle]
     convention = "google" # Format docstrings
-
 [tool.ruff.format]
 	quote-style = "single"  # Use single quotes for consistency
 	indent-style = "space"  # Use spaces for indentation
 
+# Lint settings
 [tool.ruff.lint]  
 	select = [
         "D",      # pydocstyle: enforce docstring conventions
@@ -42,7 +42,7 @@ dev = [
 		"B",      # flake8-bugbear: detect common security and performance issues
 		"C4",     # flake8-comprehensions: simplify comprehensions
 		"SIM",    # flake8-simplify: detect redundant expressions
-		"ANN",    # flake8-annotations: check for type hints
+		#"ANN",    # flake8-annotations: check for type hints
 		#"S",      # flake8-bandit: test for security
 		#"FIX002", # flake8-fixme: check for TODO
 		"PGH003", # pygrep-hooks: check for 'type: ignore' comments

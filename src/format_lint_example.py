@@ -1,4 +1,4 @@
-import   json        # uneven spacing
+import json # unused import
 import os,sys; import re      # multiple imports on one line + stray semicolon
 from   datetime  import datetime ,  timedelta as  td     # extra spacing
 import    math, random   # unsorted, extra spaces
@@ -13,8 +13,8 @@ def add(a,b):  # inconsistent spacing
 	return  (result)   # unnecessary parentheses and spaces
 def greet(name  = "world" ,exclaim=True  ,  times =1):	# spaces around '=', missing after commas
 	'''Say hi.'''
-	msg = "Hello, " + name + ("!" if exclaim==True else ".")	# compare to True
-	exclam = "!"*random.randint(1,4) if exclaim==True else "." 
+	msg = "Hello, " + name + ("!" if exclaim==True else ".") # Compare to True
+	exclam = "!"*random.randint(1,4) if exclaim==True else "."
 	long_line = "This is a very long line to push past one hundred and twenty characters so a formatter can wrap it nicely while fixing spacing and other tiny issues that sneak into quick scripts like this one when rushing."  # >120 chars
 	for  i in   range(math.ceil(times)):   print(msg + exclam)  # multiple statements on one line, extra spaces
 	return msg
