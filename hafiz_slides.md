@@ -2,43 +2,74 @@
 marp: true
 theme: gaia
 paginate: true
-# backgroundColor: #fff
+_paginate: skip
+backgroundColor: #fff
 color: #000
 size: 16:9
+# header: 'Header content'
+# footer: 'Footer content'
 ---
 <!--
 _class: lead
 -->
-# AMS Bootcamp 2025: Bash, GitHub, and Python
-
----
-<!--
-_class: lead
--->
-
-## CWP Computing Resources: [https://github.com/aissah/cwp_coding_resources.git](https://github.com/aissah/cwp_coding_resources.git)
+# AMS Bootcamp 2025: Bash Shell, GitHub, and Python
 
 ---
 
 ## Outline
 
 - **Bash**: Basics of Bash scripting and command line usage.
+- **Integrated Development Environment (IDE)**: Code in a unified workspace.
 - **Version control**: GitHub, GitLab, Bitbucket, etc.
-- **Documentation**
-- **Testing**
-- **Style**
-- **Environment reproducibility**
+- **Jupyter Notebook**: Interactive computing and data visualization.
+- **Environment manager**: Conda, uv, etc.
+- **Formatter/linter**: Tools to make code clean and consistent.
+- **Testing**: Ensuring code works as intended.
+- **AI coding tools**: Pair coding with intelligent LLMs.
 
 ---
 
-## Agenda
+## Part 1
 
 - **Bash**: Basics of Bash scripting and command line usage.
+- **Integrated Development Environment (IDE)**: Code in a unified workspace.
 - **Version control**: GitHub, GitLab, Bitbucket, etc.
-- **Documentation**: Importance of documentation and how to write it.
-- **Testing**: Importance of testing and how to write tests.
-- **Environment reproducibility**: Importance of reproducibility and how to achieve it.
-- **Style**: Importance of code style and how to enforce it.
+- **Jupyter Notebook**: Interactive computing and data visualization.
+
+---
+
+## BASH (Bourne-Again **SHell**)
+
+> **Shell** is an interface between the user and the operating system, allowing users to interact with the system through commands.
+* Can be a:
+  * **command-line interface (CLI)** or a 
+  * **graphical user interface (GUI)**.
+
+---
+
+## **Bash** (Bourne-Again SHell)
+
+> **Bash**: A command-line interface (CLI) for interacting with the operating system.
+
+- **Why**: To use git and GitHub, and for remote access.
+- **Examples**: Bash (Linux/MacOS), PowerShell (Windows).
+- **Key concepts**:
+  - Navigating the file system
+  - Running commands
+  - Creating and editing files
+  - Scripting basics
+  - Using environment variables
+  - Redirection and piping
+  - File permissions
+  - Using command-line tools
+  - Using package managers (e.g., `apt`, `brew`)
+  - Using version control (e.g., `git`)
+  - Remote access (e.g., `ssh`, `scp`)
+  - Using text editors (e.g., `nano`, `vim`, `emacs`)
+  - Using command-line utilities (e.g., `grep`, `sed`, `awk`)
+  - Using command-line tools for data processing (e.g., `cut`, `sort`, `uniq`)
+  - Using command-line tools for file management (e.g., `find`, `xargs`, `tar`)
+  - Using command-line tools for system monitoring (e.g., `top`, `htop`, `ps`)
 
 ---
 
