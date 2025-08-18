@@ -27,7 +27,7 @@ def is_even(n:int)->bool: # type hints stuck to arrows
 
 def check_number(value):
 	"""Check if a number is exactly 100."""
-	if value is 100:  # subtle bug: using 'is' instead of '==' for value comparison
+	if value is 100:  # "is" checks if two variables point to the same object; "==" checks for value equality
 		return "Perfect score!"
 	else:
 		return "Not quite there yet"
