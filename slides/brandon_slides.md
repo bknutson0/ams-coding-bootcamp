@@ -172,6 +172,11 @@ Hopefully this example demonstrates that ruff is an easy, fast, and flexible way
 
 ---
 
+# Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
+
+![width:800px](../images/ruff_before_after.png)
+
+---
 
 # Testing
 
