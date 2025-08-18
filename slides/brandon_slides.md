@@ -15,9 +15,9 @@ style: |
 
 ---
 
-# BREAK
+# Break
 
-Take a break and stretch your legs
+Take a 5 min break and stretch your legs
 
 ---
 
@@ -115,33 +115,6 @@ To format with ruff, just "uv add ruff" as a dependency, then run "ruff format" 
 To lint with ruff, just run "ruff check" on the file as shown.
 Linting technically only identifies issues, it doesn't necessarilly fix them.
 To have ruff fix any issues for which automatic fixes are available, add the --fix flag.
-Lets look at an example.
-
-However, although these commands are relatively straightforward, they are not they way that use ruff.
-A big reason I love ruff is that there is a VSCode extension for it.
-This allows ruff to provide real-time visual format & lint feedback.
-Although we do no have the time to show you, I recommend using format-on-save to automatically format and fix linting issues every time you ctrl+s save a file.
--->
-
----
-
-# Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
-
-- **Format command:**
-**`uv run ruff format file_to_be_formatted.py`**
-
-- **Lint command:**
-**`uv run ruff check --fix file_to_be_linted.py`**
-
-- Or, simply use VSCode's **`ruff`** extension and format-on-save.
-
-- Control all [**`ruff`**](https://docs.astral.sh/ruff/) settings (i.e. [rules](https://docs.astral.sh/ruff/rules/)) in **`pyproject.toml`**
-
-<!--
-To format with ruff, just "uv add ruff" as a dependency, then run "ruff format" on the file as shown.
-To lint with ruff, just run "ruff check" on the file as shown.
-Linting technically only identifies issues, it doesn't necessarilly fix them.
-To have ruff fix any issues for which automatic fixes are available, add the --fix flag.
 
 However, although these commands are relatively straightforward, they are not they way that I use ruff.
 A big reason I love ruff is that there is a VSCode extension for it.
@@ -149,7 +122,15 @@ This allows ruff to provide real-time visual format & lint feedback.
 Although we do no have the time to show you, I also recommend using format-on-save to automatically format and fix linting issues every time you ctrl+s save a file.
 
 Finally, all ruff settings, like uv dependencies, are stored in pyproject.toml.
+-->
 
+---
+
+# Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
+
+Let's practice using [**`ruff`**](https://docs.astral.sh/ruff/) on **`src/format_lint_example.py`**.
+
+<!--
 Lets look at an example:
 1. Show format_lint_example.py
 2. Point out formatting issues
@@ -174,7 +155,7 @@ Hopefully this example demonstrates that ruff is an easy, fast, and flexible way
 
 # Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
 
-![width:800px](../images/ruff_before_after.png)
+![width:1100px](../images/ruff_before_after.png)
 
 ---
 
