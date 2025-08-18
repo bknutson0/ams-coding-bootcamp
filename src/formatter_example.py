@@ -8,46 +8,26 @@ X  =  42     # extra spaces around equals
 Y=3.14       # missing spaces
 
 def add(a,b):  # inconsistent spacing
-	"""Add two numbers.
-
-	Args:
-		a (int | float): first number
-		b (int | float): second number
-
-	Returns:
-		int | float: sum
-	"""
-	result=a  +b   # extra spaces
+	"""Add two numbers."""
+	result= math.fsum([a,b])   # use math
 	return  (result)   # unnecessary parentheses and spaces
-
 def greet(name  = "world" ,exclaim=True  ,  times =1):	# spaces around '=', missing after commas
-	'''
-	Say hello (NumPy style).
-
-	Parameters
-	----------
-	name : str
-		Name to greet.
-	exclaim : bool, optional
-		Whether to add exclamation marks.
-	times : int, optional
-		How many times to repeat.
-	'''
+	'''Say hi.'''
 	msg = "Hello, " + name + ("!" if exclaim==True else ".")	# compare to True
-	long_line = "This is a ridiculously long line to demonstrate how a formatter wraps lines properly and handles spacing, commas, and other punctuation; it should definitely exceed one hundred and twenty characters in length so tools have something to do."  # very long line >120 chars
-	for  i in   range(times):   print(msg)  # multiple statements on one line, extra spaces
+	exclam = "!"*random.randint(1,4) if exclaim==True else "." 
+	long_line = "This is a very long line to push past one hundred and twenty characters so a formatter can wrap it nicely while fixing spacing and other tiny issues that sneak into quick scripts like this one when rushing."  # >120 chars
+	for  i in   range(math.ceil(times)):   print(msg + exclam)  # multiple statements on one line, extra spaces
 	return msg
 
 
 
 def is_even(n:int)->bool: # type hints stuck to arrows
-	# reST style docstring
-	"""Return True if *n* is even.
+	"""Return True if even.
 
-	:param n: Number to test.
-	:returns: bool indicating evenness.
+	:param n: int
+	:returns: bool
 	"""
-	if n%2==0 :	
+	if math.remainder(n,2)==0 :	
 		return True 
 	else:
 		return False;  # stray semicolon
