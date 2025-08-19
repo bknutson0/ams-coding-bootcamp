@@ -11,8 +11,8 @@ requires-python = ">=3.13"
 
 dependencies = [
     "numpy",
-	"requests==2.29.0",
-	"urllib3==2.0.0" 
+	"requests==2.29.0", # requires urllib3<1.27
+	#"urllib3==2.0.0" 
 ]
 
 [dependency-groups]

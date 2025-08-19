@@ -75,17 +75,21 @@ In such cases, you may need to manually resolve the conflict by adjusting versio
 # Environment management with [**`uv`**](https://docs.astral.sh/uv/)
 
 - **Basic commands**: 
-**`uv run <script.py>`**: run a script
 **`uv init`**: create a new project
-**`uv add`**: add a dependency to the project
+**`uv add <package>`**: add a dependency to the project
 **`uv sync`**: install all dependencies
+**`uv run <script.py>`**: run a script
 **`uv help`**: display help information for uv commands
 
 - Control all [**`uv`**](https://docs.astral.sh/uv/) settings and dependencies in **`pyproject.toml`**
 
 <!--
 Here are some basic uv commands ... 
-Installing an environment is as easy as **`uv sync`** 
+To initialize uv in a new project, run "uv init".
+To add a dependency, run "uv add" then the package name.
+The command "uv sync" will rapidly install all dependencies, much faster than other environment managers.
+To run a script, you would use "uv run" then the script name.
+If you want to know what other commands are available, use the command "uv help".
 -->
 
 ---
@@ -160,7 +164,7 @@ Finally, all ruff settings, like uv dependencies, are stored in pyproject.toml.
 
 # Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
 
-Let's practice using [**`ruff`**](https://docs.astral.sh/ruff/) on **`src/format_lint_example.py`**.
+Let's practice using [**`ruff`**](https://docs.astral.sh/ruff/) and **`pyproject.toml`** to format and lint **`src/format_lint_example.py`**.
 
 <!--
 Lets look at an example:
