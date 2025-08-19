@@ -222,7 +222,7 @@ _class: lead
 
 ## Version Tracking with Git
 
-![Using global env width:30cm height:cm](..\bin\git-commits.png)
+![Using global env width:30cm height:cm](..\images\git-commits.png)
 
 ---
 <!--
@@ -231,14 +231,14 @@ _class: lead
 
 ## Branching and Merging
 
-![Using global env width:30cm height:cm](..\bin\git-branch.png)
+![Using global env width:30cm height:cm](..\images\git-branch.png)
 
 ---
 <!--
 _class: lead
 -->
 
-![Using global env width:cm height:16cm](..\bin\local_git.png)
+![Using global env width:cm height:16cm](..\images\local_git.png)
 
 ---
 
@@ -267,7 +267,7 @@ _class: lead
 _class: lead
 -->
 
-![Using global env width:cm height:16cm](..\bin\remote-git.png)
+![Using global env width:cm height:16cm](..\images\remote-git.png)
 
 ---
 
