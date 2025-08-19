@@ -18,10 +18,10 @@ _class: lead
 
 ## Outline
 
-- **Bash**: Basics of Bash scripting and command line usage.
-- **Integrated Development Environment (IDE)**: Code in a unified workspace.
-- **Version control**: GitHub, GitLab, Bitbucket, etc.
-- **Jupyter Notebook**: Interactive computing and data visualization.
+- **Bash**: Basics of Command line usage
+- **Integrated Development Environment (IDE)**: Work in a unified workspace
+- **Version control**: Save and manage changes to code
+- **Jupyter Notebook**: Interactive computing and data visualization
 - **Environment manager**: Conda, uv, etc.
 - **Formatter/linter**: Tools to make code clean and consistent.
 - **Testing**: Ensuring code works as intended.
@@ -74,9 +74,9 @@ PART II
 
 ## Part 1
 
-- **Bash**: Basics of Bash scripting and command line usage.
-- **Integrated Development Environment (IDE)**: Code in a unified workspace.
-- **Version control**: GitHub, GitLab, Bitbucket, etc.
+- **Bash**: Basics of Command line usage
+- **Integrated Development Environment (IDE)**: Work in a unified workspace.
+- **Version control**: Save and manage changes to code.
 - **Jupyter Notebook**: Interactive computing and data visualization.
 
 ---
@@ -84,6 +84,7 @@ PART II
 ## BASH (Bourne-Again **SHell**)
 
 **Shell** is an interface between the user and the operating system, allowing users to interact with the system through commands.
+
 * Can be a:
   * Graphical User Interface (GUI) or a
   * **Command-Line Interface (CLI)**, examples include:
@@ -97,16 +98,13 @@ PART II
 
 **BASH**: a CLI available on most Linux and macOS operating systems, and can be installed on Windows.
 
-- **Why**: To use git and GitHub, and for remote access.
-- **Key concepts**:
+- **Key Usage**:
   - Navigating and managing the file system
   - Running commands
-  - Scripting basics
-  - Using environment variables
   - Redirection and piping
-  - File permissions
   - Using version control (e.g., `git`)
   - Remote access (e.g., `ssh`, `scp`)
+  - Automating tasks with scripts
 
 ---
 
@@ -125,8 +123,6 @@ cd my_project
 touch script.sh
 # Open 'script.sh' in a text editor (e.g., nano)
 nano script.sh
-# Run the script
-bash script.sh
 # Check the current working directory
 pwd
 # Copy a file from one directory to another
@@ -141,25 +137,54 @@ rm /path/to/file.txt
 
 ## Integrated Development Environment (IDE)
 
-- **Why**: Provides a unified workspace for coding, debugging, and testing.
-- **Examples**: RStudio, MATLAB, PyCharm, Spyder, VSCode.
-- **Key features**:
+**IDEs** provide a unified workspace for coding, debugging, and testing.
+
+- **Examples**: RStudio, MATLAB, PyCharm, Spyder, **VSCode**.
+- **Key VSCode features**:
   - Code editor with syntax highlighting
   - Integrated terminal
-  - Debugging tools
   - Version control integration
-  - Package management
-  - Code completion and suggestions
-  - Project management
   - Support for multiple programming languages
-- **Recommendation**: Install VSCode for a versatile and powerful IDE experience.
-- **Extensions**: Explore the VSCode marketplace for extensions that enhance your development workflow.
+  - Installation of extensions for package management, linting, formatting, code completion, debugging, etc.
 
 ---
 
 ## Version Control
 
-- **Why**: Never lose code, and track history.
+- **Version control**: tracking changes to files over time, allowing you to recall specific versions later.
+
+- **Benefits**:
+  - Recall specific versions later
+  - Never lose code
+  - Implement collaborative workflows
+
+* A **version control system (VCS)** is a tool that helps us do this.
+
+---
+
+## Git and GitHub
+
+- **Git** is a popular version control system
+- **GitHub** is a web-based platform for hosting Git repositories, enabling collaboration and sharing of code.
+- Other platforms: GitLab, Bitbucket, etc.
+- **Key Git commands**:
+  - `git init`: Initialize a new Git repository
+  - `git clone <repo_url>`: Clone a remote repository
+  - `git add <file>`: Stage changes for commit
+  - `git commit -m "message"`: Commit staged changes with a message
+  - `git push`: Push local commits to the remote repository
+  - `git pull`: Fetch and merge changes from the remote repository
+---
+<!--
+_class: lead
+-->
+
+![Using global env width:15cm height:18cm](..\bin\git-flow.png)
+
+---
+
+## Jupyter Notebook
+
 
 ---
 
