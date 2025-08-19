@@ -96,9 +96,9 @@ PART II
 
 ## **BASH** (Bourne-Again SHell)
 
-**BASH**: a CLI available on most Linux and macOS operating systems, and can be installed on Windows.
+**BASH**: a CLI available on most Linux and macOS operating systems, and can be installed on Windows  (e.g., via WSL or Git Bash ([https://git-scm.com/](https://git-scm.com/))).
 
-- **Key Usage**:
+- **Key Uses**:
   - Navigating and managing the file system
   - Running commands
   - Redirection and piping
@@ -135,11 +135,30 @@ rm /path/to/file.txt
 
 ---
 
+## Activity: Bash Commands
+
+- Open your terminal (Bash shell).
+- Print your current working directory (`pwd`).
+- Create a new directory called `ams_bootcamp` (`mkdir ams_bootcamp`).
+- Change into the `ams_bootcamp` directory (`cd ams_bootcamp`).
+- Create a new file called `hello_world.txt`.
+- Open `hello_world.txt` in a text editor (e.g., nano).
+- Write "Hello, AMS Bootcamp!" in the file.
+- Save and exit the text editor.
+- List the contents of the `ams_bootcamp` directory to verify the file was created.
+- Remove the `hello_world.txt` file.
+- List the contents of the `ams_bootcamp` directory again to verify the file was removed.
+- Change back to your home directory.
+- Remove the `ams_bootcamp` directory.
+- List the contents of your home directory to verify the `ams_bootcamp` directory was removed.
+
+---
+
 ## Integrated Development Environment (IDE)
 
 **IDEs** provide a unified workspace for coding, debugging, and testing.
 
-- **Examples**: RStudio, MATLAB, PyCharm, Spyder, **VSCode**.
+-  **Examples**: RStudio, MATLAB, PyCharm, Spyder, **VSCode**.
 - **Key VSCode features**:
   - Code editor with syntax highlighting
   - Integrated terminal
@@ -162,18 +181,14 @@ rm /path/to/file.txt
 
 ---
 
-## Git and GitHub
+## Git
 
 - **Git** is a popular version control system
-- **GitHub** is a web-based platform for hosting Git repositories, enabling collaboration and sharing of code.
-- Other platforms: GitLab, Bitbucket, etc.
+
 - **Key Git commands**:
   - `git init`: Initialize a new Git repository
-  - `git clone <repo_url>`: Clone a remote repository
   - `git add <file>`: Stage changes for commit
-  - `git commit -m "message"`: Commit staged changes with a message
-  - `git push`: Push local commits to the remote repository
-  - `git pull`: Fetch and merge changes from the remote repository
+  - `git commit -m "message"`: Commit staged changes
   - `git branch`: List, create, or delete branches
 
 ---
@@ -199,14 +214,23 @@ _class: lead
 _class: lead
 -->
 
-![Using global env width:cm height:17cm](..\bin\local_git.png)
+![Using global env width:cm height:16cm](..\bin\local_git.png)
+
+---
+
+**GitHub** is a web-based platform for hosting Git repositories, enabling collaboration and sharing of code.
+
+* **Common Remote Repository Commands**:
+  - `git clone <repo_url>`: Clone a remote repository
+  - `git push`: Push local commits to the remote repository
+  - `git pull`: Fetch and merge changes from the remote repository
 
 ---
 <!--
 _class: lead
 -->
 
-![Using global env width:15cm height:18cm](..\bin\local_git.png)
+![Using global env width:cm height:16cm](..\bin\remote-git.png)
 
 ---
 
