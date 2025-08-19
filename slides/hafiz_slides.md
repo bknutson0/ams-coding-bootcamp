@@ -20,7 +20,7 @@ _class: lead
 
 - **Bash**: Basics of Command line usage
 - **Integrated Development Environment (IDE)**: Work in a unified workspace
-- **Version control**: Save and manage changes to code
+- **Version control**: Track changes to code
 - **Jupyter Notebook**: Interactive computing and data visualization
 - **Environment manager**: Conda, uv, etc.
 - **Formatter/linter**: Tools to make code clean and consistent.
@@ -76,7 +76,7 @@ PART II
 
 - **Bash**: Basics of Command line usage
 - **Integrated Development Environment (IDE)**: Work in a unified workspace.
-- **Version control**: Save and manage changes to code.
+- **Version control**: Track changes to code.
 - **Jupyter Notebook**: Interactive computing and data visualization.
 
 ---
@@ -96,61 +96,48 @@ PART II
 
 ## **BASH** (Bourne-Again SHell)
 
-**BASH**: a CLI available on most Linux and macOS operating systems, and can be installed on Windows  (e.g., via WSL or Git Bash ([https://git-scm.com/](https://git-scm.com/))).
+**BASH**: a CLI available on most Linux and macOS operating systems. Can be installed on Windows  (e.g., via Git Bash ([https://git-scm.com/](https://git-scm.com/)))
 
 - **Key Uses**:
   - Navigating and managing the file system
   - Running commands
+  - Automating tasks with scripts
   - Redirection and piping
   - Using version control (e.g., `git`)
   - Remote access (e.g., `ssh`, `scp`)
-  - Automating tasks with scripts
 
 ---
 
 ## Example of Bash commands
 
-```bash
-# List files in the current directory
-ls
-# Change directory to 'Documents'
-cd Documents
-# Create a new directory called 'my_project'
-mkdir my_project
-# Change directory to 'my_project'
-cd my_project
-# Create a new file called 'script.sh'
-touch script.sh
-# Open 'script.sh' in a text editor (e.g., nano)
-nano script.sh
-# Check the current working directory
-pwd
-# Copy a file from one directory to another
-cp /path/to/source/file.txt /path/to/destination/
-# Move a file from one directory to another
-mv /path/to/source/file.txt /path/to/destination/
-# Remove a file
-rm /path/to/file.txt
-```
+- `ls` - list files in the current directory
+- `cd` - change directory
+- `pwd` - print working directory
+- `mkdir` - make a new directory
+- `touch` - create a new file
+- `rm` - remove a file or directory
+- `cp`/`mv` - copy/move files or directories
+- `cat` - concatenate and display file contents
+- `echo` - print text to the terminal
 
 ---
 
 ## Activity: Bash Commands
 
-- Open your terminal (Bash shell).
-- Print your current working directory (`pwd`).
-- Create a new directory called `ams_bootcamp` (`mkdir ams_bootcamp`).
-- Change into the `ams_bootcamp` directory (`cd ams_bootcamp`).
-- Create a new file called `hello_world.txt`.
-- Open `hello_world.txt` in a text editor (e.g., nano).
-- Write "Hello, AMS Bootcamp!" in the file.
-- Save and exit the text editor.
-- List the contents of the `ams_bootcamp` directory to verify the file was created.
-- Remove the `hello_world.txt` file.
-- List the contents of the `ams_bootcamp` directory again to verify the file was removed.
-- Change back to your home directory.
-- Remove the `ams_bootcamp` directory.
-- List the contents of your home directory to verify the `ams_bootcamp` directory was removed.
+1. Open your terminal (Bash shell).
+2. Print your current working directory.
+3. Create a new directory called `ams_bootcamp`.
+4. Change into the `ams_bootcamp` directory.
+5. Create a new file called `hello_world.txt`.
+6. Open `hello_world.txt` in a text editor (e.g., vim, nano).
+7. Write "Hello, AMS Bootcamp!" in the file.
+8. Save and exit the text editor.
+9. List contents of `ams_bootcamp` directory to verify file was created.
+<!-- 10. Remove the `hello_world.txt` file.
+11. List the contents of the `ams_bootcamp` directory again to verify the file was removed.
+12. Change back to your home directory.
+13. Remove the `ams_bootcamp` directory.
+14. List the contents of your home directory to verify the `ams_bootcamp` directory was removed. -->
 
 ---
 
