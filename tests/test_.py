@@ -1,8 +1,4 @@
-"""Educational test examples for AMS Coding Bootcamp.
-
-These are simple test functions that demonstrate basic testing concepts
-for use with pytest.
-"""
+from src.format_lint_example_fixed import is_even
 
 
 def test_basic_math():
@@ -32,3 +28,22 @@ def test_list_basics():
     assert sum(numbers) == 15
     assert max(numbers) == 5
     assert min(numbers) == 1
+
+
+def test_is_even():
+    """Test the is_even function with various inputs."""
+    # Test even numbers
+    assert is_even(0) is True
+    assert is_even(2) is True
+    assert is_even(4) is True
+    assert is_even(100) is True
+    assert is_even(-2) is True
+    assert is_even(-4) is True
+
+    # Test odd numbers
+    assert is_even(1) is False
+    assert is_even(3) is False
+    assert is_even(5) is False
+    assert is_even(99) is False
+    assert is_even(-1) is False
+    assert is_even(-3) is False

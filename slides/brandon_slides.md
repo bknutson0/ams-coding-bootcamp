@@ -263,7 +263,7 @@ This is particularly useful for easy problems that ruff cannot automatically fix
 
 # AI agent
 
-Let's use GitHub Copilot to help us write code more efficiently.
+Let's use GitHub Copilot to add a test for the `is_even()` function.
 
 ---
 
