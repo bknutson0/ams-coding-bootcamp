@@ -101,6 +101,18 @@ If you want to know what other commands are available, use the command "uv help"
 
 Let's practice using [**`uv`**](https://docs.astral.sh/uv/) and **`pyproject.toml`** to manage our environment.
 
+<!--
+1. uv init
+2. uv tree
+3. pyproject.toml
+4. uv sync
+5. uncomment "urllib3==2.0.0"
+6. uv sync -> dependency conflict
+7. remove version requirement or comment out (can edit pyproject.toml or use uv remove)
+8. uv sync -> dependency resolved
+
+"""
+
 ---
 
 # Formatting
@@ -208,8 +220,12 @@ Hopefully this example demonstrates that ruff is an easy, fast, and flexible way
 
 <!--
 Good code is not just nicely formatted and free of obvious bugs and errors -- it actually works as intended.
-The 
+Tests are essential for ensuring the code is behaving correctly.
+This could mean that a function in a file works as you'd expect, or it could mean testing that one component of your code works correctly with another component.
+Frequent testing ensures that as you make changes to your code, you don't break anything.
+And if you do break something, you can quickly identify and fix the problem.
 -->
+
 ---
 
 # Testing
