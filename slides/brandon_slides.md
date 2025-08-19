@@ -199,7 +199,7 @@ Hopefully this example demonstrates that ruff is an easy, fast, and flexible way
 
 - **Motivation:** Ensure code is working as intended
 
-- **Examples:** ..., **`pytest`**
+- **Examples:** ... **`pytest`**
 
 - **To run tests:** save tests as **`tests/test_<name>.py`** then run the command **`uv run pytest`**
 
@@ -209,15 +209,64 @@ The
 -->
 ---
 
-# AI coding tools
+# Testing
 
-- **Motivation:** Pair coding with an intelligent LLM is the way of the future
+- You can create a [GitHub Action workflow](https://github.com/bknutson0/ams-coding-bootcamp/actions) so that GitHub automatically runs your tests on every push and pull request
+
+- To do so, add **`.github/workflows/<name>.yml`** to your repo and enable Actions in your GitHub repository settings
+
+- See the example in this repo
+
+---
+
+# AI agent 
+
+- **Motivation:** Pair coding with an agent is the way of the future
 
 - **Examples:** OpenAI Codex, Claude Code, GitHub Copilot
 
-- As a student, you can get GitHub Copilot Pro for free via the [Student Developer Pack](https://education.github.com/pack/)
+- AI agents can read your repo and suggest changes based on conversation
 
 <!--
 Pair programming with an AI agent can help you write better code faster.
 Agents can provide context-aware autocomplete suggestions, but also assist with code navigation, refactoring, generating tests, and much more.
+One convenience of these agents is that they have direct read access to your repo, so you don't have to do what I use to do: copy-paste blocks of code into ChatGPT.
+Of course, it is important to review and understand suggested changes before accepting, especially for important parts of your code.
+My usual workflow is to first have a conversation with the agent about high-level strategy.
+As a relatively inexperienced programmer, I use this conversation to learn about software engineering best practices.
+Then I decide on an approach and describe in as much detail as I can what I want the agent to implement.
+The first implementation it generates is usually decent, but upon reviewing suggestions I almost always have to request modifications.
+Overall, I have found this workflow helps me to power through small technical details, allowing me to spend more time on interesting problems.
+Of course, just like with humans, sometimes agents suggest code with bugs that slip past inspection.
+So proper testing to ensure the code is serving its purpose becomes even more important.
 -->
+
+---
+
+# AI agent
+
+- GitHub Copilot is a VS Code extension with a built-in interface that lets you select different models
+
+- As a student, you can get GitHub Copilot Pro **for free** via GitHub's [Student Developer Pack](https://education.github.com/pack/), which gives you access to more advanced models
+
+<!--
+GitHub Copilot is a VS Code extension with a built-in interface that lets you select different models.
+It is very convenient to have your main coding environment and the agent conversation integrated in one interface.
+As a student, you can get GitHub Copilot Pro for free via the Student Developer Pack.
+This gives you access to more advanced models, including GPT-5 and Claude Sonnet 4.
+I have found that using advanced models can very dramatically improve the quality of conversation and suggestions made by the agent. 
+There is a particular synergy between ruff and GitHub Copilot, because the agent can see the formatting and linting problems when it reads your code, and then automatically fix them when creating its suggestion.
+This is particularly useful for easy problems that ruff cannot automatically fix like lines that are too long or simple logical reductions.
+-->
+
+---
+
+# AI agent
+
+Let's use GitHub Copilot to help us write code more efficiently.
+
+---
+
+# Thank you!
+
+If you enjoyed this presentation, please consider giving a star to our [GitHub repository](https://github.com/bknutson0/ams-coding-bootcamp)
