@@ -45,7 +45,7 @@ dev = [
 		"UP",     # pyupgrade: modernize syntax for newer Python versions
 		"B",      # flake8-bugbear: detect common security and performance issues
 		"C4",     # flake8-comprehensions: simplify comprehensions
-		"SIM",    # flake8-simplify: detect redundant expressions
+		#"SIM",    # flake8-simplify: detect redundant expressions
 		#"ANN",    # flake8-annotations: check for type hints
 		#"S",      # flake8-bandit: test for security
 		#"FIX002", # flake8-fixme: check for TODO
