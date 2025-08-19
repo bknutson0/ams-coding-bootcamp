@@ -18,14 +18,14 @@ _class: lead
 
 ## Outline
 
-- **Bash**: Basics of Command line usage
-- **Integrated Development Environment (IDE)**: Work in a unified workspace
-- **Version control**: Track changes to code
-- **Jupyter Notebook**: Interactive computing and data visualization
-- **Environment manager**: Conda, uv, etc.
-- **Formatter/linter**: Tools to make code clean and consistent.
-- **Testing**: Ensuring code works as intended.
-- **AI coding tools**: Pair coding with intelligent LLMs.
+- **BASH**
+- **Integrated Development Environment (IDE)**
+- **Version control**
+- **Jupyter Notebook**
+- **Environment manager**
+- **Formatter/linter**
+- **Testing**
+- **AI coding tools**
 
 <!--
 PART I
@@ -72,21 +72,22 @@ PART II
 
 ---
 
-## Resources
+### Resources
 
 - AMS Bootcamp GitHub Repository: [https://github.com/bknutson0/ams-coding-bootcamp](https://github.com/bknutson0/ams-coding-bootcamp)
 - Michael's bootcamp repo ([https://github.com/mivanit/bash-git-bootcamp](https://github.com/mivanit/bash-git-bootcamp)) and python projects template repo ([https://github.com/mivanit/python-project-makefile-template](https://github.com/mivanit/python-project-makefile-template))
 - Course for scientific computing in python: [https://opensourcecourse.dev/osc_intro/intro.html](https://opensourcecourse.dev/osc_intro/intro.html)
 - Microsoft introduction to Python: [https://vscodeedu.com/courses/intro-to-python](https://vscodeedu.com/courses/intro-to-python)
+- Mines HPC guide: [https://rc-docs.mines.edu/pages/user_guides/new_user_guide.html](https://rc-docs.mines.edu/pages/user_guides/new_user_guide.html)
 
 ---
 
-## Part 1
+## Part 1 - Learning Objectives
 
-- **Bash**: Basics of Command line usage
-- **Integrated Development Environment (IDE)**: Work in a unified workspace.
-- **Version control**: Track changes to code.
-- **Jupyter Notebook**: Interactive computing and data visualization.
+- **Bash**: Basic Command line usage
+- **Integrated Development Environment (IDE)**: Work in a unified workspace
+- **Version control**: Track changes to code
+- **Jupyter Notebook**: Interactive computing and data visualization
 
 ---
 
@@ -107,13 +108,13 @@ PART II
 
 **BASH**: a CLI available on most Linux and macOS operating systems. Can be installed on Windows  (e.g., via Git Bash ([https://git-scm.com/](https://git-scm.com/)))
 
-- **Key Uses**:
-  - Navigating and managing the file system
-  - Running commands
-  - Automating tasks with scripts
-  - Using version control (e.g., `git`)
-  - Remote access (e.g., `ssh`, `scp`)
-  - Redirection and piping
+* **Key Uses**:
+  * Navigating and managing the file system
+  * Running commands
+  * Automating tasks with scripts
+  * Using version control (e.g., `git`)
+  * Remote access (e.g., `ssh`, `scp`)
+  * Redirection and piping
 
 ---
 
@@ -152,20 +153,24 @@ PART II
 
 ## Demo: Automating tasks with scripts
 
+Run `bash_intro.py` in the terminal
+
+Run `bash_intro.sh` to illustrate how to automate tasks with scripts.
+
 ---
 
 ## Integrated Development Environment (IDE)
 
 **IDEs** provide a unified workspace for coding, debugging, and testing.
 
-- **Examples**: RStudio, MATLAB, PyCharm, Spyder, **VSCode**.
-- **Key VSCode features**:
-  - Code editor with syntax highlighting
-  - Integrated terminal
-  - Version control integration
-  - Support for multiple programming languages
-  - Installation of extensions for package management, linting, formatting, code completion, debugging, etc.
-  
+* **Examples**: RStudio, MATLAB, PyCharm, Spyder, **VSCode**.
+* **Key VSCode features**:
+  * Code editor with syntax highlighting
+  * Integrated terminal
+  * Version control integration
+  * Support for multiple programming languages
+  * Installation of extensions for package management, linting, formatting, code completion, debugging, etc.
+
 ---
 
 ## Activity: Install VSCode
@@ -189,7 +194,7 @@ PART II
 
 ## Version Control
 
-- **Version control**: tracking changes to files over time, allowing you to recall specific versions later.
+**Version control**: tracking changes to files over time.
 
 - **Benefits**:
   - Recall specific versions later
@@ -266,7 +271,15 @@ _class: lead
 
 ---
 
-## Activity: GitHub
+## Activity: Clone a GitHub Repository
+
+- Clone the AMS Bootcamp repository ([https://github.com/bknutson0/ams-coding-bootcamp](https://github.com/bknutson0/ams-coding-bootcamp)) from GitHub to your local machine
+* You can make changes but you cannot push them back to the original repository
+* If you want to make changes, you can fork the repository to your own GitHub account and then clone that forked repository
+
+---
+
+## Extra Activity: GitHub
 
 1. Create a GitHub account if you don't have one.
 2. Create a new GitHub repository (e.g., `ams-bootcamp`).
@@ -278,13 +291,19 @@ _class: lead
 
 ---
 
-## Jupyter Notebook
+## Jupyter Notebooks/Google Colab
+
+- Interactive environments for data analysis and visualization
+- Support for rich media output (e.g., plots, images)
+- Easy sharing and collaboration
+
+**Activity**: Open a Jupyter Notebook or Google Colab and copy and paste the content of the `bootcamp_example.py` file into various cells.
 
 ---
 
 ## Summary
 
-- Use a linter and formatter (**Ruff**) to maintain a consistent style in your Python code
-- Use **uv** to manage virtual environments and dependencies in Python
-- Use **GitHub Copilot** to help you write code faster and with fewer errors
-- Use **pdocs** to generate documentation for your Python projects
+- **BASH** provides a text-based interface to interact with the operating system
+- IDEs like **VSCode** offer a unified workspace for coding, debugging, and testing
+- Version control with **Git** and **GitHub** allows tracking changes to code and collaboration
+- **Jupyter Notebook/Google Colab** enables prototyping, interactive computing, and data visualization
