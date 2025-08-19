@@ -23,16 +23,16 @@ Take a 5 min break and stretch your legs
 
 # Part II
 
-- **Environment manager**: **`conda`**, **`uv`**, etc.
-- **Formatting & linting**: Tools to make code clean and consistent.
-- **Testing**: Ensuring code works as intended.
-- **AI coding tools**: Pair coding with intelligent LLMs.
+- **Environment management**: make code reproducible
+- **Formatting & linting**: tools to make code clean and consistent.
+- **Testing**: ensuring code works as intended.
+- **AI coding tools**: pair coding with an AI agent.
 
 ---
 
 # Environment management
 
-- **Motivation:** Make code reproducible by identifying dependencies
+- **Motivation:** Make code reproducible by identifying and resolving dependencies
 
 - **Examples:** **`pip venv`**, **`conda`**, [**`uv`**](https://docs.astral.sh/uv/)
 
@@ -49,18 +49,50 @@ Installing and activating an environment is as easy as
 
 ---
 
+# Environment management
+![center](../images/dependency_graph.png)
+
+<!--
+An environment manager will try to install all dependencies.Most packages depend on other packages, creating a dependency graph as shown. 
+Suppose we need to install packages A and B, and both depend on package C.
+Then the environment will need to install all three.
+Luckily, A requires C version greater than 1.2.3, and B requires C version less than 2.0.0, so any version inbetween will do.
+-->
+
+---
+
+# Environment management
+![center](../images/dependency_graph_conflict.png)
+
+<!--
+But sometimes packages have conflicting requirements.
+For example, if package A requires version < 1.2.3 of package C, and package B requires version > 2.0.0 of package C, then there is a conflict.
+In such cases, you may need to manually resolve the conflict by adjusting versions or even using alternative packages.
+-->
+
+---
+
 # Environment management with [**`uv`**](https://docs.astral.sh/uv/)
 
 - **Basic commands**: 
-    **`uv sync`**
-    **`uv add`**
+**`uv run <script.py>`**: run a script
+**`uv init`**: create a new project
+**`uv add`**: add a dependency to the project
+**`uv sync`**: install all dependencies
+**`uv help`**: display help information for uv commands
 
-- Control all [**`uv`**](https://docs.astral.sh/uv/) settings in **`pyproject.toml`**
+- Control all [**`uv`**](https://docs.astral.sh/uv/) settings and dependencies in **`pyproject.toml`**
 
 <!--
-Installing and activating an environment is as easy as 
-**`uv sync`** 
+Here are some basic uv commands ... 
+Installing an environment is as easy as **`uv sync`** 
 -->
+
+---
+
+# Environment management with [**`uv`**](https://docs.astral.sh/uv/)
+
+Let's practice using [**`uv`**](https://docs.astral.sh/uv/) and **`pyproject.toml`** to manage our environment.
 
 ---
 
