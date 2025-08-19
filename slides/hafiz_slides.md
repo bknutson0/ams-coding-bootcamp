@@ -174,17 +174,43 @@ rm /path/to/file.txt
   - `git commit -m "message"`: Commit staged changes with a message
   - `git push`: Push local commits to the remote repository
   - `git pull`: Fetch and merge changes from the remote repository
+  - `git branch`: List, create, or delete branches
+
 ---
 <!--
 _class: lead
 -->
 
-![Using global env width:15cm height:18cm](..\bin\git-flow.png)
+## Version Tracking with Git
+
+![Using global env width:30cm height:cm](..\bin\git-commits.png)
+
+---
+<!--
+_class: lead
+-->
+
+## Branching and Merging
+
+![Using global env width:30cm height:cm](..\bin\git-branch.png)
+
+---
+<!--
+_class: lead
+-->
+
+![Using global env width:cm height:17cm](..\bin\local_git.png)
+
+---
+<!--
+_class: lead
+-->
+
+![Using global env width:15cm height:18cm](..\bin\local_git.png)
 
 ---
 
 ## Jupyter Notebook
-
 
 ---
 
