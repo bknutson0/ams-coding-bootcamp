@@ -102,9 +102,9 @@ PART II
   - Navigating and managing the file system
   - Running commands
   - Automating tasks with scripts
-  - Redirection and piping
   - Using version control (e.g., `git`)
   - Remote access (e.g., `ssh`, `scp`)
+  - Redirection and piping
 
 ---
 
@@ -118,7 +118,7 @@ PART II
 - `rm` - remove a file or directory
 - `cp`/`mv` - copy/move files or directories
 - `cat` - concatenate and display file contents
-- `echo` - print text to the terminal
+- other commands...
 
 ---
 
@@ -141,17 +141,45 @@ PART II
 
 ---
 
+## Demo: Automating tasks with scripts
+
+---
+
 ## Integrated Development Environment (IDE)
 
 **IDEs** provide a unified workspace for coding, debugging, and testing.
 
--  **Examples**: RStudio, MATLAB, PyCharm, Spyder, **VSCode**.
+- **Examples**: RStudio, MATLAB, PyCharm, Spyder, **VSCode**.
 - **Key VSCode features**:
   - Code editor with syntax highlighting
   - Integrated terminal
   - Version control integration
   - Support for multiple programming languages
   - Installation of extensions for package management, linting, formatting, code completion, debugging, etc.
+  
+---
+
+## Activity: Install VSCode
+1. Download and install **Visual Studio Code** from [https://code.visualstudio.com/](https://code.visualstudio.com/).
+2. Open VSCode.
+3. Install the following extensions:
+   - Python
+   - Jupyter
+   - GitLens (for Git integration)
+   - Pylance (for Python language support)
+   - Prettier (for code formatting)
+4. Open the integrated terminal in VSCode (View > Terminal).
+5. Create a new Python file (e.g., `hello.py`) and write a simple print statement:
+  
+   ```python
+   print("Hello, AMS Bootcamp!")
+   ```
+
+6. Run the Python file using the integrated terminal:
+
+   ```bash
+   python hello.py
+   ```
 
 ---
 
