@@ -72,6 +72,15 @@ PART II
 
 ---
 
+## Resources
+
+- AMS Bootcamp GitHub Repository: [https://github.com/bknutson0/ams-coding-bootcamp](https://github.com/bknutson0/ams-coding-bootcamp)
+- Michael's bootcamp repo ([https://github.com/mivanit/bash-git-bootcamp](https://github.com/mivanit/bash-git-bootcamp)) and python projects template repo ([https://github.com/mivanit/python-project-makefile-template](https://github.com/mivanit/python-project-makefile-template))
+- Course for scientific computing in python: [https://opensourcecourse.dev/osc_intro/intro.html](https://opensourcecourse.dev/osc_intro/intro.html)
+- Microsoft introduction to Python: [https://vscodeedu.com/courses/intro-to-python](https://vscodeedu.com/courses/intro-to-python)
+
+---
+
 ## Part 1
 
 - **Bash**: Basics of Command line usage
@@ -160,22 +169,17 @@ PART II
 ---
 
 ## Activity: Install VSCode
+
 1. Download and install **Visual Studio Code** from [https://code.visualstudio.com/](https://code.visualstudio.com/).
-2. Open VSCode.
-3. Install the following extensions:
+<!-- 3. Install the following extensions:
    - Python
    - Jupyter
    - GitLens (for Git integration)
    - Pylance (for Python language support)
-   - Prettier (for code formatting)
-4. Open the integrated terminal in VSCode (View > Terminal).
-5. Create a new Python file (e.g., `hello.py`) and write a simple print statement:
-  
-   ```python
-   print("Hello, AMS Bootcamp!")
-   ```
-
-6. Run the Python file using the integrated terminal:
+   - Prettier (for code formatting) -->
+2. Create a new Python file (e.g., `hello.py`) and write a simple print statement:`print("Hello, AMS Bootcamp!")`
+3. Open the integrated terminal in VSCode (View > Terminal).
+4. Run the Python file using the integrated terminal:
 
    ```bash
    python hello.py
@@ -233,6 +237,19 @@ _class: lead
 
 ---
 
+## Activity: Git
+
+1. Open your terminal (Bash shell).
+2. Create a new directory called `ams_git_demo`.
+3. Change into the `ams_git_demo` directory.
+4. Initialize a new Git repository in this directory using `git init`.
+5. Create a new file called `README.md` and add some content to it.
+6. Stage the file using `git add README.md`.
+7. Commit the changes with a message using `git commit -m "Initial commit"`.
+8. Check the status of your Git repository using `git status`.
+
+---
+
 **GitHub** is a web-based platform for hosting Git repositories, enabling collaboration and sharing of code.
 
 * **Common Remote Repository Commands**:
@@ -246,6 +263,18 @@ _class: lead
 -->
 
 ![Using global env width:cm height:16cm](..\bin\remote-git.png)
+
+---
+
+## Activity: GitHub
+
+1. Create a GitHub account if you don't have one.
+2. Create a new GitHub repository (e.g., `ams-bootcamp`).
+3. Clone the repository to your local machine.
+4. Create a new file in the cloned repository (e.g., `README.md`) and add some content.
+5. Stage and commit your changes.
+6. Push your changes to the remote repository on GitHub.
+7. Verify that the changes appear in your GitHub repository.
 
 ---
 
