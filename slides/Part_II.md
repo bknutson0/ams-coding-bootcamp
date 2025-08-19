@@ -26,7 +26,7 @@ Take a 5 min break and stretch your legs
 - **Environment management**: make code reproducible
 - **Formatting & linting**: make code clean and consistent
 - **Testing**: ensure code works as intended
-- **AI coding tools**: pair code with an AI agent
+- **AI coding agents**: pair code with AI
 
 <!-- 
 Caveat: I am very new to many of these tools, but I will try to share my personal perspective and the tricks I have found useful.
@@ -77,6 +77,8 @@ In such cases, you may need to manually resolve the conflict by adjusting versio
 
 # Environment management with [**`uv`**](https://docs.astral.sh/uv/)
 
+- Install [**`uv`**](https://docs.astral.sh/uv/) [here](https://docs.astral.sh/uv/getting-started/installation/)
+
 - **Basic commands**: 
 **`uv init`**: create a new project
 **`uv add <package>`**: add a dependency to the project
@@ -110,8 +112,7 @@ Let's practice using [**`uv`**](https://docs.astral.sh/uv/) and **`pyproject.tom
 6. uv sync -> dependency conflict
 7. remove version requirement or comment out (can edit pyproject.toml or use uv remove)
 8. uv sync -> dependency resolved
-
-"""
+-->
 
 ---
 
