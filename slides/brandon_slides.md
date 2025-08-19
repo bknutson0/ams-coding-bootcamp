@@ -199,7 +199,9 @@ Hopefully this example demonstrates that ruff is an easy, fast, and flexible way
 
 - **Motivation:** Ensure code is working as intended
 
-- **Examples:** **`pytest`**, GitHub Actions
+- **Examples:** ..., **`pytest`**
+
+- **To run tests:** save tests as **`tests/test_<name>.py`** then run the command **`uv run pytest`**
 
 <!--
 Good code is not just nicely formatted and free of obvious bugs and errors -- it actually works as intended.
