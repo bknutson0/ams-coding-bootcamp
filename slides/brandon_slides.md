@@ -15,36 +15,62 @@ style: |
 
 ---
 
-# BREAK
+# Break
 
-Take a break and stretch your legs
+Take a 5 min break and stretch your legs
 
 ---
 
 # Part II
 
-- **Environment manager**: **`conda`**, **`uv`**, etc.
-- **Formatting & linting**: Tools to make code clean and consistent.
-- **Testing**: Ensuring code works as intended.
-- **AI coding tools**: Pair coding with intelligent LLMs.
+- **Environment management**: make code reproducible
+- **Formatting & linting**: make code clean and consistent
+- **Testing**: ensure code works as intended
+- **AI coding tools**: pair code with an AI agent
+
+<!-- 
+Caveat: I am very new to many of these tools, but I will try to share my personal perspective and the tricks I have found useful.
+Feel free to ask questions at any point.
+-->
 
 ---
 
 # Environment management
 
-- **Motivation:** Make code reproducible by identifying dependencies
+- **Motivation:** Make code reproducible by identifying and solving dependencies
 
 - **Examples:** **`pip venv`**, **`conda`**, [**`uv`**](https://docs.astral.sh/uv/)
 
 <!--
-Caveat: I am very new to many of these tools, but I will try to share my personal perspective and the tricks I have found useful.
-For Python code to run, you need to have the right version of Python and external libraries installed.
+We begin with environment management.
+For Python code to run, you need to have the right version of Python and external libraries/packages/dependencies installed.
 In other words, you need to have the right "environment".
-Environment managers automate this process. 
+Environment managers automate and simplify this process. 
 Python has a built-in environment manager called "pip venv", but there are also popular third-party tools like "conda" and "uv".
-My favorite is "uv" because it is the easiest to use, incredibly fast, and works well with other tools I'll mention later.
-Installing and activating an environment is as easy as 
-**`uv sync`** 
+My favorite is "uv" because it is the easiest to use, installs incredibly fast, and works well with other tools -- but we'll talk about that later.
+-->
+
+---
+
+# Environment management
+![center](../images/dependency_graph.png)
+
+<!--
+An environment manager will try to install all dependencies.Most packages depend on other packages, creating a dependency graph as shown. 
+Suppose we need to install packages A and B, and both depend on package C.
+Then the environment will need to install all three.
+Luckily, A requires C version greater than 1.2.3, and B requires C version less than 2.0.0, so any version inbetween will do.
+-->
+
+---
+
+# Environment management
+![center](../images/dependency_graph_conflict.png)
+
+<!--
+But sometimes packages have conflicting requirements.
+For example, if package A requires version < 1.2.3 of package C, and package B requires version > 2.0.0 of package C, then there is a conflict.
+In such cases, you may need to manually resolve the conflict by adjusting versions or even using alternative packages.
 -->
 
 ---
@@ -52,15 +78,40 @@ Installing and activating an environment is as easy as
 # Environment management with [**`uv`**](https://docs.astral.sh/uv/)
 
 - **Basic commands**: 
-    **`uv sync`**
-    **`uv add`**
+**`uv init`**: create a new project
+**`uv add <package>`**: add a dependency to the project
+**`uv sync`**: install all dependencies
+**`uv run <script.py>`**: run a script
+**`uv help`**: display help information for uv commands
 
-- Control all [**`uv`**](https://docs.astral.sh/uv/) settings in **`pyproject.toml`**
+- Control all [**`uv`**](https://docs.astral.sh/uv/) settings and dependencies in **`pyproject.toml`**
 
 <!--
-Installing and activating an environment is as easy as 
-**`uv sync`** 
+Here are some basic uv commands ... 
+To initialize uv in a new project, run "uv init".
+To add a dependency, run "uv add" then the package name.
+The command "uv sync" will rapidly install all dependencies, much faster than other environment managers.
+To run a script, you would use "uv run" then the script name.
+If you want to know what other commands are available, use the command "uv help".
 -->
+
+---
+
+# Environment management with [**`uv`**](https://docs.astral.sh/uv/)
+
+Let's practice using [**`uv`**](https://docs.astral.sh/uv/) and **`pyproject.toml`** to manage our environment.
+
+<!--
+1. uv init
+2. uv tree
+3. pyproject.toml
+4. uv sync
+5. uncomment "urllib3==2.0.0"
+6. uv sync -> dependency conflict
+7. remove version requirement or comment out (can edit pyproject.toml or use uv remove)
+8. uv sync -> dependency resolved
+
+"""
 
 ---
 
@@ -115,33 +166,6 @@ To format with ruff, just "uv add ruff" as a dependency, then run "ruff format" 
 To lint with ruff, just run "ruff check" on the file as shown.
 Linting technically only identifies issues, it doesn't necessarilly fix them.
 To have ruff fix any issues for which automatic fixes are available, add the --fix flag.
-Lets look at an example.
-
-However, although these commands are relatively straightforward, they are not they way that use ruff.
-A big reason I love ruff is that there is a VSCode extension for it.
-This allows ruff to provide real-time visual format & lint feedback.
-Although we do no have the time to show you, I recommend using format-on-save to automatically format and fix linting issues every time you ctrl+s save a file.
--->
-
----
-
-# Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
-
-- **Format command:**
-**`uv run ruff format file_to_be_formatted.py`**
-
-- **Lint command:**
-**`uv run ruff check --fix file_to_be_linted.py`**
-
-- Or, simply use VSCode's **`ruff`** extension and format-on-save.
-
-- Control all [**`ruff`**](https://docs.astral.sh/ruff/) settings (i.e. [rules](https://docs.astral.sh/ruff/rules/)) in **`pyproject.toml`**
-
-<!--
-To format with ruff, just "uv add ruff" as a dependency, then run "ruff format" on the file as shown.
-To lint with ruff, just run "ruff check" on the file as shown.
-Linting technically only identifies issues, it doesn't necessarilly fix them.
-To have ruff fix any issues for which automatic fixes are available, add the --fix flag.
 
 However, although these commands are relatively straightforward, they are not they way that I use ruff.
 A big reason I love ruff is that there is a VSCode extension for it.
@@ -149,7 +173,15 @@ This allows ruff to provide real-time visual format & lint feedback.
 Although we do no have the time to show you, I also recommend using format-on-save to automatically format and fix linting issues every time you ctrl+s save a file.
 
 Finally, all ruff settings, like uv dependencies, are stored in pyproject.toml.
+-->
 
+---
+
+# Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
+
+Let's practice using [**`ruff`**](https://docs.astral.sh/ruff/) and **`pyproject.toml`** to format and lint **`src/format_lint_example.py`**.
+
+<!--
 Lets look at an example:
 1. Show format_lint_example.py
 2. Point out formatting issues
@@ -174,7 +206,7 @@ Hopefully this example demonstrates that ruff is an easy, fast, and flexible way
 
 # Formatting & linting with [**`ruff`**](https://docs.astral.sh/ruff/)
 
-![width:800px](../images/ruff_before_after.png)
+![width:1100px](../images/ruff_before_after.png)
 
 ---
 
@@ -182,23 +214,78 @@ Hopefully this example demonstrates that ruff is an easy, fast, and flexible way
 
 - **Motivation:** Ensure code is working as intended
 
-- **Examples:** **`pytest`**, GitHub Actions
+- **Examples:** ... **`pytest`**
+
+- **To run tests:** save tests as **`tests/test_<name>.py`** then run the command **`uv run pytest`**
 
 <!--
 Good code is not just nicely formatted and free of obvious bugs and errors -- it actually works as intended.
-The 
+Tests are essential for ensuring the code is behaving correctly.
+This could mean that a function in a file works as you'd expect, or it could mean testing that one component of your code works correctly with another component.
+Frequent testing ensures that as you make changes to your code, you don't break anything.
+And if you do break something, you can quickly identify and fix the problem.
 -->
+
 ---
 
-# AI coding tools
+# Testing
 
-- **Motivation:** Pair coding with an intelligent LLM is the way of the future
+- You can create a [GitHub Action workflow](https://github.com/bknutson0/ams-coding-bootcamp/actions) so that GitHub automatically runs your tests on every push and pull request
+
+- To do so, add **`.github/workflows/<name>.yml`** to your repo and enable Actions in your GitHub repository settings
+
+- See the example in this repo
+
+---
+
+# AI agent 
+
+- **Motivation:** Pair coding with an agent is the way of the future
 
 - **Examples:** OpenAI Codex, Claude Code, GitHub Copilot
 
-- As a student, you can get GitHub Copilot Pro for free via the [Student Developer Pack](https://education.github.com/pack/)
+- AI agents can read your repo and suggest changes based on conversation
 
 <!--
 Pair programming with an AI agent can help you write better code faster.
 Agents can provide context-aware autocomplete suggestions, but also assist with code navigation, refactoring, generating tests, and much more.
+One convenience of these agents is that they have direct read access to your repo, so you don't have to do what I use to do: copy-paste blocks of code into ChatGPT.
+Of course, it is important to review and understand suggested changes before accepting, especially for important parts of your code.
+My usual workflow is to first have a conversation with the agent about high-level strategy.
+As a relatively inexperienced programmer, I use this conversation to learn about software engineering best practices.
+Then I decide on an approach and describe in as much detail as I can what I want the agent to implement.
+The first implementation it generates is usually decent, but upon reviewing suggestions I almost always have to request modifications.
+Overall, I have found this workflow helps me to power through small technical details, allowing me to spend more time on interesting problems.
+Of course, just like with humans, sometimes agents suggest code with bugs that slip past inspection.
+So proper testing to ensure the code is serving its purpose becomes even more important.
 -->
+
+---
+
+# AI agent
+
+- GitHub Copilot is a VS Code extension with a built-in interface that lets you select different models
+
+- As a student, you can get GitHub Copilot Pro **for free** via GitHub's [Student Developer Pack](https://education.github.com/pack/), which gives you access to more advanced models
+
+<!--
+GitHub Copilot is a VS Code extension with a built-in interface that lets you select different models.
+It is very convenient to have your main coding environment and the agent conversation integrated in one interface.
+As a student, you can get GitHub Copilot Pro for free via the Student Developer Pack.
+This gives you access to more advanced models, including GPT-5 and Claude Sonnet 4.
+I have found that using advanced models can very dramatically improve the quality of conversation and suggestions made by the agent. 
+There is a particular synergy between ruff and GitHub Copilot, because the agent can see the formatting and linting problems when it reads your code, and then automatically fix them when creating its suggestion.
+This is particularly useful for easy problems that ruff cannot automatically fix like lines that are too long or simple logical reductions.
+-->
+
+---
+
+# AI agent
+
+Let's use GitHub Copilot to add a test for the `is_even()` function.
+
+---
+
+# Thank you!
+
+If you enjoyed this presentation, please consider giving a star to our [GitHub repository](https://github.com/bknutson0/ams-coding-bootcamp)

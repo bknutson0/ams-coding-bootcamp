@@ -9,10 +9,14 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.13"
 
+# Main dependencies
 dependencies = [
-    "numpy"
+    "numpy",
+	"requests==2.29.0",
+	#"urllib3==2.0.0" # causes dependency conflict
 ]
 
+# Development dependencies
 [dependency-groups]
 dev = [
 	"ruff", # lint & format
