@@ -24,27 +24,30 @@ Take a 5 min break and stretch your legs
 # Part II
 
 - **Environment management**: make code reproducible
-- **Formatting & linting**: tools to make code clean and consistent.
-- **Testing**: ensuring code works as intended.
-- **AI coding tools**: pair coding with an AI agent.
+- **Formatting & linting**: make code clean and consistent
+- **Testing**: ensure code works as intended
+- **AI coding tools**: pair code with an AI agent
+
+<!-- 
+Caveat: I am very new to many of these tools, but I will try to share my personal perspective and the tricks I have found useful.
+Feel free to ask questions at any point.
+-->
 
 ---
 
 # Environment management
 
-- **Motivation:** Make code reproducible by identifying and resolving dependencies
+- **Motivation:** Make code reproducible by identifying and solving dependencies
 
 - **Examples:** **`pip venv`**, **`conda`**, [**`uv`**](https://docs.astral.sh/uv/)
 
 <!--
-Caveat: I am very new to many of these tools, but I will try to share my personal perspective and the tricks I have found useful.
-For Python code to run, you need to have the right version of Python and external libraries installed.
+We begin with environment management.
+For Python code to run, you need to have the right version of Python and external libraries/packages/dependencies installed.
 In other words, you need to have the right "environment".
-Environment managers automate this process. 
+Environment managers automate and simplify this process. 
 Python has a built-in environment manager called "pip venv", but there are also popular third-party tools like "conda" and "uv".
-My favorite is "uv" because it is the easiest to use, incredibly fast, and works well with other tools I'll mention later.
-Installing and activating an environment is as easy as 
-**`uv sync`** 
+My favorite is "uv" because it is the easiest to use, installs incredibly fast, and works well with other tools -- but we'll talk about that later.
 -->
 
 ---
